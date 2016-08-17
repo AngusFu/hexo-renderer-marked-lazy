@@ -1,6 +1,6 @@
 {
   "name": "hexo-renderer-marked-lazy",
-  "version": "0.2.11",
+  "version": "0.1.1",
   "description": "Markdown renderer plugin for Hexo, based on Tommy Chen's hexo-renderer-marked",
   "main": "index",
   "scripts": {
