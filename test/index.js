@@ -6,7 +6,10 @@ var util = require('hexo-util');
 describe('Marked renderer', function() {
   var ctx = {
     config: {
-      marked: {}
+      marked: {
+        lazyAttr: 'data-src',
+        blankSrc: '/img/placeholder.png'
+      }
     }
   };
 
@@ -63,6 +66,6 @@ describe('Marked renderer', function() {
     var body = '![image desc](http://image.url.jpg)';
     var result = r({text: body}).trim();
 
-    result.should.eql('<p><img data-src="http://image.url.jpg" alt="image desc"></p>');
+    result.should.eql('<p><img src="/img/placeholder.png" data-src="http://image.url.jpg" alt="image desc"></p>');
   });
 });
